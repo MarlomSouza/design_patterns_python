@@ -22,3 +22,6 @@ class ForecastKPIs(AbsObserver):
         print(f"Expected tickets to be closed: {self.closed_tickets}")
         print(f"Expected new tickets: {self.new_tickets}")
         print(10 * "*")
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._kpis.detach(self)

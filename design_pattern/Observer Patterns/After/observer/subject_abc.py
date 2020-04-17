@@ -20,3 +20,9 @@ class AbsSubject(object):
                 observer.update()
             else:
                 observer.update(value)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._observer.clear()

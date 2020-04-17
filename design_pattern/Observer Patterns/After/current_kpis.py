@@ -22,3 +22,6 @@ class CurrentKPIs(AbsObserver):
         print(f"Current Closed tickets: {self.closed_tickets}")
         print(f"Current New tickets: {self.new_tickets}")
         print(10 * "*")
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._kpis.detach(self)
