@@ -1,4 +1,4 @@
-from auto_abs import AbsAuto
+from .auto_abs import AbsAuto
 
 class JeepSahara(AbsAuto):
     def start(self):

@@ -1,5 +1,5 @@
+from .auto_abs import AbsAuto
 
-from auto_abs import AbsAuto
 
 class NullCar(AbsAuto):
     def __init__(self, carname):

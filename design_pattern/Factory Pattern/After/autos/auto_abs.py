@@ -1,13 +1,12 @@
-from abc import ABCMeta, abstractmethod
+import abc
 
 
-class AbsAuto(object):
-    __metaclass__ = ABCMeta
+class AbsAuto(metaclass=abc.ABCMeta):
 
-    @abstractmethod
-    def start():
+    @abc.abstractmethod
+    def start(self):
         pass
 
-    @abstractmethod
-    def stop():
+    @abc.abstractmethod
+    def stop(self):
         pass
